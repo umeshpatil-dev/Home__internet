@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   
+   
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+
+    <title>DropBox</title>
+  </head>
+
+
+  <body>
+
+<div class="container">
+  <!-- Content here -->
+
+    <h1>Shared drive</h1>
+    <a href="/browse/{{cur_dir}}">
+    <button type="button" class="btn btn-primary" >Browse files</button></a>
+<h5>Upload to drive</h5>
+<form action="/upload" method="post" enctype="multipart/form-data">
+ 
+  <input type="file" name="fileToUpload" id="fileToUpload">
+  <input type="submit" value="Upload Image" name="submit">
+</form>
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+    
+  </body>
+</html>

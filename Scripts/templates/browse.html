@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   
+   
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+
+    <title>DropBox</title>
+  </head>
+
+
+  <body>
+
+
+    
+    <h4>Current Directory : {{cur_dir}}</h4>
+    <h5>Available Folders</h5>
+    <ul class="list-group">
+		  {#    loop through galaxies and render them in list#}
+        {% for folder in folders %}
+            <li class="list-group-item"><a href="/browse/{{cur_dir}}/{{folder}}">{{ folder }}</a></li>
+        {% endfor %}
+	   </ul>
+
+
+
+<h5>Available Files</h5>
+
+<ul class="list-group">
+     
+        {% for file in files %}
+            <li class="list-group-item"><a href="/download_file/{{cur_dir}}/{{file}}">{{ file }}</a></li>
+        {% endfor %}
+  </ul>
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+    
+  </body>
+</html>
